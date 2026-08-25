@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "vitest run --passWithNoTests && node tests/config-contract.test.mjs"
+    "typecheck": "tsc --noEmit --incremental false --skipLibCheck false",
+    "test": "npm run typecheck && vitest run --passWithNoTests && node tests/config-contract.test.mjs"
   },
   "dependencies": {
     "@next/mdx": "^15.5.2",
