@@ -16,7 +16,7 @@ for (const file of [
 }
 
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
-assert.equal(packageJson.scripts.test, "vitest run");
+assert.equal(packageJson.scripts.test, "vitest run --passWithNoTests && node tests/config-contract.test.mjs");
 assert.ok(packageJson.dependencies["@next/mdx"]);
 assert.ok(packageJson.devDependencies.vitest);
 
