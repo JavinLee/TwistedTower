@@ -27,13 +27,23 @@ describe("guides", () => {
   it("returns the complete guide catalog with stable metadata", () => {
     const expected = [
       { slug: "walkthrough", number: "01", title: "Complete Walkthrough", status: "published" },
-      { slug: "puzzle-solutions", number: "02", title: "Puzzle Solutions", status: "planned" },
-      { slug: "bosses", number: "03", title: "Boss Guide", status: "planned" },
-      { slug: "collectibles", number: "04", title: "Collectibles & Secrets", status: "planned" },
-      { slug: "weapons", number: "05", title: "Weapons & Movement", status: "planned" },
-      { slug: "achievements", number: "06", title: "Achievements", status: "planned" },
-      { slug: "story", number: "07", title: "Story & Ending", status: "planned" },
-      { slug: "steam", number: "08", title: "Steam Details", status: "planned" },
+      { slug: "puzzle-solutions", number: "02", title: "Puzzle Solutions", status: "published" },
+      { slug: "bosses", number: "03", title: "Boss Guide", status: "published" },
+      { slug: "collectibles", number: "04", title: "Collectibles", status: "published" },
+      { slug: "weapons", number: "05", title: "Weapons", status: "published" },
+      { slug: "secrets", number: "06", title: "Secrets", status: "published" },
+      { slug: "achievements", number: "07", title: "Achievements", status: "published" },
+      { slug: "steam", number: "08", title: "Steam", status: "published" },
+      { slug: "steamdb", number: "09", title: "SteamDB", status: "published" },
+      { slug: "price", number: "10", title: "Price", status: "published" },
+      { slug: "demo", number: "11", title: "Demo", status: "published" },
+      { slug: "review", number: "12", title: "Review", status: "published" },
+      { slug: "ending", number: "13", title: "Ending Explained", status: "published" },
+      { slug: "story", number: "14", title: "Story", status: "published" },
+      { slug: "release-date", number: "15", title: "Release Date", status: "published" },
+      { slug: "launch-trailer", number: "16", title: "Launch Trailer", status: "published" },
+      { slug: "thomas-brush", number: "17", title: "Thomas Brush", status: "published" },
+      { slug: "game-length", number: "18", title: "Game Length", status: "published" },
     ];
     const guides = guidesFor("en");
 

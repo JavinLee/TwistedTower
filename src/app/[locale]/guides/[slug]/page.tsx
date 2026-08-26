@@ -5,16 +5,14 @@ import type { HTMLAttributes } from "react";
 import { notFound } from "next/navigation";
 import { Callout } from "@/components/Callout";
 import { articleHeadingId } from "@/lib/article";
-import { isLocale, type Locale } from "@/lib/i18n";
+import { isLocale, locales, type Locale } from "@/lib/i18n";
+import { guidesFor } from "@/lib/guides";
 import { getGuide } from "@/lib/mdx";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return [
-    { locale: "en", slug: "walkthrough" },
-    { locale: "es", slug: "walkthrough" },
-  ];
+  return locales.flatMap((locale) => guidesFor(locale).map(({ slug }) => ({ locale, slug })));
 }
 
 export async function generateMetadata({
@@ -27,7 +25,7 @@ export async function generateMetadata({
   if (!guide) return {};
 
   return {
-    title: `${guide.frontmatter.title} | Twisted Tower Wiki`,
+    title: guide.frontmatter.title,
     description: guide.frontmatter.description,
   };
 }

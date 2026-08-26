@@ -9,7 +9,7 @@ describe("getGuide", () => {
     const guide = getGuide("walkthrough");
 
     expect(guide?.frontmatter).toEqual({
-      title: "Twisted Tower Complete Walkthrough",
+      title: "Twisted Tower Walkthrough: Complete Route Guide",
       description: expect.any(String),
       eyebrow: expect.any(String),
       updatedAt: expect.any(String),
@@ -106,6 +106,6 @@ describe("getGuide", () => {
   });
 
   it("returns null for an unavailable guide", () => {
-    expect(getGuide("bosses")).toBeNull();
+    expect(getGuide("not-a-real-guide")).toBeNull();
   });
 });
