@@ -44,10 +44,10 @@ describe("keyword inner pages", () => {
     }
   });
 
-  it("marks unsupported details as coming soon instead of inventing facts", () => {
-    expect(getGuide("price")?.source.toLowerCase()).toContain("coming soon");
-    expect(getGuide("steamdb")?.source.toLowerCase()).toContain("coming soon");
-    expect(getGuide("bosses")?.source.toLowerCase()).toContain("coming soon");
-    expect(getGuide("secrets")?.source.toLowerCase()).toContain("coming soon");
+  it("marks unsupported details as to be confirmed instead of inventing facts", () => {
+    expect(getGuide("price")?.source.toLowerCase()).toContain("to be confirmed");
+    expect(getGuide("steamdb")?.source.toLowerCase()).toContain("to be confirmed");
+    expect(getGuide("bosses")?.source.toLowerCase()).toContain("to be confirmed");
+    expect(getGuide("secrets")?.source.toLowerCase()).toContain("to be confirmed");
   });
 });
