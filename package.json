@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit --incremental false --skipLibCheck false",
+    "typecheck": "next typegen && tsc --noEmit --incremental false --skipLibCheck false",
     "test": "npm run typecheck && vitest run --passWithNoTests && node tests/config-contract.test.mjs"
   },
   "dependencies": {

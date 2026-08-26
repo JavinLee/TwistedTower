@@ -16,7 +16,7 @@ for (const file of [
 }
 
 const packageJson = JSON.parse(fs.readFileSync(path.join(root, "package.json"), "utf8"));
-assert.equal(packageJson.scripts.typecheck, "tsc --noEmit --incremental false --skipLibCheck false");
+assert.equal(packageJson.scripts.typecheck, "next typegen && tsc --noEmit --incremental false --skipLibCheck false");
 assert.equal(
   packageJson.scripts.test,
   "npm run typecheck && vitest run --passWithNoTests && node tests/config-contract.test.mjs",
