@@ -14,17 +14,31 @@ export function HeroSection({ locale }: { locale: Locale }) {
         </h1>
         <p className="hero__lead">{copy.hero.description}</p>
         <div className="hero__actions">
-          <Link href={`/${locale}/guides/walkthrough`} className="button">
+          <Link href={`/${locale}/guides#beginner`} className="button">
             {copy.hero.primaryCta}
           </Link>
           <Link href={`/${locale}/guides`} className="button button--quiet">
             {copy.hero.secondaryCta}
           </Link>
+          <a
+            href={copy.officialLinks.steam}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button--quiet"
+          >
+            {copy.hero.tertiaryCta} ↗
+          </a>
         </div>
       </div>
-      <div className="hero__art" aria-label={copy.hero.trailerLabel} role="img">
+      <a
+        className="hero__art"
+        href={copy.officialLinks.trailer}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={copy.hero.trailerLabel}
+      >
         <span>{copy.hero.trailerLabel}</span>
-      </div>
+      </a>
       <div className="facts" aria-label={locale === "es" ? "Datos del juego" : "Game facts"}>
         {copy.facts.map((fact) => (
           <div key={fact.label}>

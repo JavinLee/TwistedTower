@@ -43,21 +43,27 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         </dl>
       </section>
       <section className="popular" aria-labelledby="popular-guide-title">
-        <div>
+        <div className="popular__guide">
           <p className="eyebrow">{siteCopy.popularTitle}</p>
-          <h2 id="popular-guide-title">Complete Walkthrough</h2>
+          <h2 id="popular-guide-title">{copy.labels.completeWalkthrough}</h2>
           <p>{siteCopy.popularDescription}</p>
+          <Link href={`/${locale}/guides/walkthrough`} className="button">
+            {copy.labels.openGuide} →
+          </Link>
         </div>
-        <Link href={`/${locale}/guides/walkthrough`} className="button">
-          {locale === "es" ? "Abrir la guía" : "Open the guide"} →
-        </Link>
+        <aside className="codes-panel" aria-labelledby="codes-title">
+          <p className="eyebrow">{copy.labels.redeemCodes}</p>
+          <h3 id="codes-title">{siteCopy.redeemCodes.title}</h3>
+          <p>{siteCopy.redeemCodes.description}</p>
+          <strong>{siteCopy.redeemCodes.value}</strong>
+        </aside>
       </section>
       <section className="final-cta" aria-labelledby="final-cta-title">
         <p className="eyebrow">Twisted Tower Wiki</p>
         <h2 id="final-cta-title">{siteCopy.finalTitle}</h2>
         <p>{siteCopy.finalDescription}</p>
         <div className="hero__actions">
-          <Link href={`/${locale}/guides/walkthrough`} className="button">
+          <Link href={`/${locale}/guides#beginner`} className="button">
             {siteCopy.finalPrimary}
           </Link>
           <a

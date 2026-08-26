@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { copyFor, type Locale } from "@/lib/i18n";
+import { siteCopyFor } from "@/lib/site";
 
 export function SiteHeader({ locale }: { locale: Locale }) {
   const copy = copyFor(locale);
+  const siteCopy = siteCopyFor(locale);
   const alternateLocale = locale === "en" ? "es" : "en";
 
   return (
@@ -14,7 +16,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
         <Link href={`/${locale}`}>{copy.nav.home}</Link>
         <Link href={`/${locale}/guides`}>{copy.nav.guides}</Link>
         <a
-          href="https://store.steampowered.com/app/1575990/Twisted_Tower/"
+          href={siteCopy.officialLinks.steam}
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -62,8 +62,13 @@ h2 { font-size: clamp(2.4rem, 5vw, 4.3rem); line-height: .95; margin: 8px 0 30px
 .intel dl div { padding: 18px 0; border-bottom: 1px solid var(--line); }
 .intel dt { color: var(--muted); font: 500 .7rem monospace; text-transform: uppercase; }
 .intel dd { margin: 6px 0 0; font-weight: 700; }
-.popular { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+.popular { display: flex; align-items: stretch; justify-content: space-between; gap: 32px; }
+.popular__guide { flex: 1; }
 .popular h2 { margin-bottom: 16px; }
+.codes-panel { width: min(360px, 100%); padding: 24px; background: var(--surface-elevated); border: 1px solid var(--line); border-top: 3px solid var(--orange); }
+.codes-panel h3 { margin: 8px 0 14px; font-size: 1.5rem; }
+.codes-panel p:not(.eyebrow) { color: var(--muted); font-size: .88rem; line-height: 1.6; }
+.codes-panel strong { display: block; margin-top: 22px; color: var(--orange); font: 700 1.2rem monospace; }
 .final-cta { padding-bottom: 112px; }
 .final-cta h2 { max-width: 720px; }
 .directory { padding: 72px 0 100px; }

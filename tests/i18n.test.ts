@@ -6,13 +6,15 @@ describe("i18n", () => {
   it("only accepts supported locale identifiers", () => {
     expect(isLocale("en")).toBe(true);
     expect(isLocale("es")).toBe(true);
+    expect(isLocale("de")).toBe(true);
+    expect(isLocale("ja")).toBe(true);
     expect(isLocale("fr")).toBe(false);
   });
 
   it("returns English navigation and label copy", () => {
     expect(copyFor("en")).toEqual({
       nav: { home: "Home", guides: "Guides", steam: "Steam" },
-      labels: { startHere: "Start Here", missionIntel: "Mission Intel", planned: "Planned guide" },
+      labels: { startHere: "Start Here", missionIntel: "Mission Intel", planned: "Planned guide", redeemCodes: "Redeem codes", completeWalkthrough: "Complete Walkthrough", openGuide: "Open the guide" },
     });
   });
 

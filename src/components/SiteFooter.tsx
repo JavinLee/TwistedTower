@@ -15,15 +15,23 @@ export function SiteFooter({ locale }: { locale: Locale }) {
       </div>
       <div className="site-footer__links">
         <Link href={`/${locale}/guides`}>{locale === "es" ? "Guías" : "Guides"}</Link>
-        <a
-          href="https://store.steampowered.com/app/1575990/Twisted_Tower/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href={copy.officialLinks.website} target="_blank" rel="noopener noreferrer">
+          Official Website ↗
+        </a>
+        <a href={copy.officialLinks.developer} target="_blank" rel="noopener noreferrer">
+          Atmos Games ↗
+        </a>
+        <a href={copy.officialLinks.steam} target="_blank" rel="noopener noreferrer">
           Steam ↗
         </a>
-        <a href="https://discord.gg/DywJ8NZDx" target="_blank" rel="noopener noreferrer">
+        <a href={copy.officialLinks.discord} target="_blank" rel="noopener noreferrer">
           Discord ↗
+        </a>
+        <a href={copy.officialLinks.youtube} target="_blank" rel="noopener noreferrer">
+          YouTube ↗
+        </a>
+        <a href={copy.officialLinks.discussions} target="_blank" rel="noopener noreferrer">
+          Steam Discussions ↗
         </a>
       </div>
       <small className="site-footer__note">© 2026 Twisted Tower Wiki</small>
