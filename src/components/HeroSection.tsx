@@ -1,3 +1,4 @@
+import * as React from "react";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { siteCopyFor } from "@/lib/site";
@@ -37,7 +38,13 @@ export function HeroSection({ locale }: { locale: Locale }) {
         rel="noopener noreferrer"
         aria-label={copy.hero.trailerLabel}
       >
-        <span>{copy.hero.trailerLabel}</span>
+        <img
+          src={copy.officialLinks.trailerThumbnail}
+          alt={copy.hero.trailerLabel}
+          loading="eager"
+        />
+        <span className="hero__play" aria-hidden="true">▶</span>
+        <span className="hero__trailer-label">{copy.hero.trailerLabel}</span>
       </a>
       <div className="facts" aria-label={locale === "es" ? "Datos del juego" : "Game facts"}>
         {copy.facts.map((fact) => (

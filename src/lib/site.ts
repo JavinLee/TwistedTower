@@ -8,6 +8,7 @@ export const officialLinks = {
   discord: "https://discord.gg/DywJ8NZDx",
   youtube: "https://www.youtube.com/@3drealmsgames",
   trailer: "https://www.youtube.com/watch?v=2LxB81yhLxo",
+  trailerThumbnail: "https://i.ytimg.com/vi/2LxB81yhLxo/hqdefault.jpg",
   discussions: "https://steamcommunity.com/app/1575990/discussions/",
 } as const;
 
